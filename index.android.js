@@ -1,9 +1,3 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- * @flow
- */
-
 import React, { Component } from 'react';
 import {
   Text,
@@ -228,7 +222,346 @@ export default class AwesomeProject extends Component {
                 />
               </View>
             )
-          } 
+          } else {
+            return (
+              <View style={styles.convertionContainer}>
+                <TextInput
+                  style={{ height: 40 }}
+                  placeholder="Type currency value to convert here!"
+                  keyboardType="numeric"
+                  onChangeText={(text) => this.setState({ currencyFromValue: Number(text) })}
+                />
+                <View>
+                  <Text>From</Text>
+                  <Picker
+                    selectedValue={this.state.currencyFrom}
+                    onValueChange={(from) => this.setState({ currencyFrom: from })}>
+                    <Picker.Item label="AED" value="aed" />
+                    <Picker.Item label="AFN" value="afn" />
+                    <Picker.Item label="ALL" value="all" />
+                    <Picker.Item label="AMD" value="amd" />
+                    <Picker.Item label="ANG" value="ang" />
+                    <Picker.Item label="AOA" value="aoa" />
+                    <Picker.Item label="ARS" value="ars" />
+                    <Picker.Item label="AUD" value="aud" />
+                    <Picker.Item label="AWG" value="awg" />
+                    <Picker.Item label="AZN" value="azn" />
+                    <Picker.Item label="BAM" value="bam" />
+                    <Picker.Item label="BBD" value="bbd" />
+                    <Picker.Item label="BDT" value="bdt" />
+                    <Picker.Item label="BGN" value="bgn" />
+                    <Picker.Item label="BHD" value="bhd" />
+                    <Picker.Item label="BIF" value="bif" />
+                    <Picker.Item label="BND" value="bnd" />
+                    <Picker.Item label="BOB" value="bob" />
+                    <Picker.Item label="BRL" value="brl" />
+                    <Picker.Item label="BSD" value="bsd" />
+                    <Picker.Item label="BTC" value="btc" />
+                    <Picker.Item label="BTN" value="btn" />
+                    <Picker.Item label="BWP" value="bwp" />
+                    <Picker.Item label="BYR" value="byr" />
+                    <Picker.Item label="BZD" value="bzd" />
+                    <Picker.Item label="CAD" value="cad" />
+                    <Picker.Item label="CDF" value="cdf" />
+                    <Picker.Item label="CHF" value="chf" />
+                    <Picker.Item label="CLP" value="clp" />
+                    <Picker.Item label="CNY" value="cny" />
+                    <Picker.Item label="COP" value="cop" />
+                    <Picker.Item label="CRC" value="crc" />
+                    <Picker.Item label="CUP" value="cup" />
+                    <Picker.Item label="CVE" value="cve" />
+                    <Picker.Item label="CZK" value="czk" />
+                    <Picker.Item label="DJF" value="djf" />
+                    <Picker.Item label="DKK" value="dkk" />
+                    <Picker.Item label="DOP" value="dop" />
+                    <Picker.Item label="DZD" value="dzd" />
+                    <Picker.Item label="EGP" value="egp" />
+                    <Picker.Item label="ERN" value="ern" />
+                    <Picker.Item label="ETB" value="etb" />
+                    <Picker.Item label="EUR" value="eur" />
+                    <Picker.Item label="FJD" value="fjd" />
+                    <Picker.Item label="FKP" value="fkp" />
+                    <Picker.Item label="GBP" value="gbp" />
+                    <Picker.Item label="GEL" value="gel" />
+                    <Picker.Item label="GHS" value="ghs" />
+                    <Picker.Item label="GIP" value="gip" />
+                    <Picker.Item label="GMD" value="gmd" />
+                    <Picker.Item label="GNF" value="gnf" />
+                    <Picker.Item label="GTQ" value="gtq" />
+                    <Picker.Item label="GYD" value="gyd" />
+                    <Picker.Item label="HKD" value="hkd" />
+                    <Picker.Item label="HNL" value="hnl" />
+                    <Picker.Item label="HRK" value="hrk" />
+                    <Picker.Item label="HTG" value="htg" />
+                    <Picker.Item label="HUF" value="huf" />
+                    <Picker.Item label="IDR" value="idr" />
+                    <Picker.Item label="ILS" value="ils" />
+                    <Picker.Item label="INR" value="inr" />
+                    <Picker.Item label="IQD" value="iqd" />
+                    <Picker.Item label="IRR" value="irr" />
+                    <Picker.Item label="ISK" value="isk" />
+                    <Picker.Item label="JMD" value="jmd" />
+                    <Picker.Item label="JOD" value="jod" />
+                    <Picker.Item label="JPY" value="jpy" />
+                    <Picker.Item label="KES" value="kes" />
+                    <Picker.Item label="KGS" value="kgs" />
+                    <Picker.Item label="KHR" value="khr" />
+                    <Picker.Item label="KMF" value="kmf" />
+                    <Picker.Item label="KPW" value="kpw" />
+                    <Picker.Item label="KRW" value="krw" />
+                    <Picker.Item label="KWD" value="kwd" />
+                    <Picker.Item label="KYD" value="kyd" />
+                    <Picker.Item label="KZT" value="kzt" />
+                    <Picker.Item label="LAK" value="lak" />
+                    <Picker.Item label="LBP" value="lbp" />
+                    <Picker.Item label="LKR" value="lkr" />
+                    <Picker.Item label="LRD" value="lrd" />
+                    <Picker.Item label="LSL" value="lsl" />
+                    <Picker.Item label="LVL" value="lvl" />
+                    <Picker.Item label="LYD" value="lyd" />
+                    <Picker.Item label="MAD" value="mad" />
+                    <Picker.Item label="MDL" value="mdl" />
+                    <Picker.Item label="MGA" value="mga" />
+                    <Picker.Item label="MKD" value="mkd" />
+                    <Picker.Item label="MMK" value="mmk" />
+                    <Picker.Item label="MNT" value="mnt" />
+                    <Picker.Item label="MOP" value="mop" />
+                    <Picker.Item label="MRO" value="mro" />
+                    <Picker.Item label="MUR" value="mur" />
+                    <Picker.Item label="MVR" value="mvr" />
+                    <Picker.Item label="MWK" value="mwk" />
+                    <Picker.Item label="MXN" value="mxn" />
+                    <Picker.Item label="MYR" value="myr" />
+                    <Picker.Item label="MZN" value="mzn" />
+                    <Picker.Item label="NAD" value="nad" />
+                    <Picker.Item label="NGN" value="ngn" />
+                    <Picker.Item label="NIO" value="nio" />
+                    <Picker.Item label="NOK" value="nok" />
+                    <Picker.Item label="NPR" value="npr" />
+                    <Picker.Item label="NZD" value="nzd" />
+                    <Picker.Item label="OMR" value="omr" />
+                    <Picker.Item label="PAB" value="pab" />
+                    <Picker.Item label="PEN" value="pen" />
+                    <Picker.Item label="PGK" value="pgk" />
+                    <Picker.Item label="PHP" value="php" />
+                    <Picker.Item label="PKR" value="pkr" />
+                    <Picker.Item label="PLN" value="pln" />
+                    <Picker.Item label="PYG" value="pyg" />
+                    <Picker.Item label="QAR" value="qar" />
+                    <Picker.Item label="RON" value="ron" />
+                    <Picker.Item label="RSD" value="rsd" />
+                    <Picker.Item label="RUB" value="rub" />
+                    <Picker.Item label="RWF" value="rwf" />
+                    <Picker.Item label="SAR" value="sar" />
+                    <Picker.Item label="SBD" value="sbd" />
+                    <Picker.Item label="SCR" value="scr" />
+                    <Picker.Item label="SDG" value="sdg" />
+                    <Picker.Item label="SEK" value="sek" />
+                    <Picker.Item label="SGD" value="sgd" />
+                    <Picker.Item label="SHP" value="shp" />
+                    <Picker.Item label="SLL" value="sll" />
+                    <Picker.Item label="SOS" value="sos" />
+                    <Picker.Item label="SRD" value="srd" />
+                    <Picker.Item label="STD" value="std" />
+                    <Picker.Item label="SYP" value="syp" />
+                    <Picker.Item label="SZL" value="szl" />
+                    <Picker.Item label="THB" value="thb" />
+                    <Picker.Item label="TJS" value="tjs" />
+                    <Picker.Item label="TMT" value="tmt" />
+                    <Picker.Item label="TND" value="tnd" />
+                    <Picker.Item label="TOP" value="top" />
+                    <Picker.Item label="TRY" value="try" />
+                    <Picker.Item label="TTD" value="ttd" />
+                    <Picker.Item label="TWD" value="twd" />
+                    <Picker.Item label="TZS" value="tzs" />
+                    <Picker.Item label="UAH" value="uah" />
+                    <Picker.Item label="UGX" value="ugx" />
+                    <Picker.Item label="USD" value="usd" />
+                    <Picker.Item label="UYU" value="uyu" />
+                    <Picker.Item label="UZS" value="uzs" />
+                    <Picker.Item label="VEF" value="vef" />
+                    <Picker.Item label="VND" value="vnd" />
+                    <Picker.Item label="VUV" value="vuv" />
+                    <Picker.Item label="WST" value="wst" />
+                    <Picker.Item label="XAF" value="xaf" />
+                    <Picker.Item label="XCD" value="xcd" />
+                    <Picker.Item label="XDR" value="xdr" />
+                    <Picker.Item label="XOF" value="xof" />
+                    <Picker.Item label="XPF" value="xpf" />
+                    <Picker.Item label="YER" value="yer" />
+                    <Picker.Item label="ZAR" value="zar" />
+                    <Picker.Item label="ZMW" value="zmw" />
+                  </Picker>
+                  <Text>To</Text>
+                  <Picker
+                    selectedValue={this.state.currencyTo}
+                    onValueChange={(to) => this.setState({ currencyTo: to })}>
+                    <Picker.Item label="AED" value="aed" />
+                    <Picker.Item label="AFN" value="afn" />
+                    <Picker.Item label="ALL" value="all" />
+                    <Picker.Item label="AMD" value="amd" />
+                    <Picker.Item label="ANG" value="ang" />
+                    <Picker.Item label="AOA" value="aoa" />
+                    <Picker.Item label="ARS" value="ars" />
+                    <Picker.Item label="AUD" value="aud" />
+                    <Picker.Item label="AWG" value="awg" />
+                    <Picker.Item label="AZN" value="azn" />
+                    <Picker.Item label="BAM" value="bam" />
+                    <Picker.Item label="BBD" value="bbd" />
+                    <Picker.Item label="BDT" value="bdt" />
+                    <Picker.Item label="BGN" value="bgn" />
+                    <Picker.Item label="BHD" value="bhd" />
+                    <Picker.Item label="BIF" value="bif" />
+                    <Picker.Item label="BND" value="bnd" />
+                    <Picker.Item label="BOB" value="bob" />
+                    <Picker.Item label="BRL" value="brl" />
+                    <Picker.Item label="BSD" value="bsd" />
+                    <Picker.Item label="BTC" value="btc" />
+                    <Picker.Item label="BTN" value="btn" />
+                    <Picker.Item label="BWP" value="bwp" />
+                    <Picker.Item label="BYR" value="byr" />
+                    <Picker.Item label="BZD" value="bzd" />
+                    <Picker.Item label="CAD" value="cad" />
+                    <Picker.Item label="CDF" value="cdf" />
+                    <Picker.Item label="CHF" value="chf" />
+                    <Picker.Item label="CLP" value="clp" />
+                    <Picker.Item label="CNY" value="cny" />
+                    <Picker.Item label="COP" value="cop" />
+                    <Picker.Item label="CRC" value="crc" />
+                    <Picker.Item label="CUP" value="cup" />
+                    <Picker.Item label="CVE" value="cve" />
+                    <Picker.Item label="CZK" value="czk" />
+                    <Picker.Item label="DJF" value="djf" />
+                    <Picker.Item label="DKK" value="dkk" />
+                    <Picker.Item label="DOP" value="dop" />
+                    <Picker.Item label="DZD" value="dzd" />
+                    <Picker.Item label="EGP" value="egp" />
+                    <Picker.Item label="ERN" value="ern" />
+                    <Picker.Item label="ETB" value="etb" />
+                    <Picker.Item label="EUR" value="eur" />
+                    <Picker.Item label="FJD" value="fjd" />
+                    <Picker.Item label="FKP" value="fkp" />
+                    <Picker.Item label="GBP" value="gbp" />
+                    <Picker.Item label="GEL" value="gel" />
+                    <Picker.Item label="GHS" value="ghs" />
+                    <Picker.Item label="GIP" value="gip" />
+                    <Picker.Item label="GMD" value="gmd" />
+                    <Picker.Item label="GNF" value="gnf" />
+                    <Picker.Item label="GTQ" value="gtq" />
+                    <Picker.Item label="GYD" value="gyd" />
+                    <Picker.Item label="HKD" value="hkd" />
+                    <Picker.Item label="HNL" value="hnl" />
+                    <Picker.Item label="HRK" value="hrk" />
+                    <Picker.Item label="HTG" value="htg" />
+                    <Picker.Item label="HUF" value="huf" />
+                    <Picker.Item label="IDR" value="idr" />
+                    <Picker.Item label="ILS" value="ils" />
+                    <Picker.Item label="INR" value="inr" />
+                    <Picker.Item label="IQD" value="iqd" />
+                    <Picker.Item label="IRR" value="irr" />
+                    <Picker.Item label="ISK" value="isk" />
+                    <Picker.Item label="JMD" value="jmd" />
+                    <Picker.Item label="JOD" value="jod" />
+                    <Picker.Item label="JPY" value="jpy" />
+                    <Picker.Item label="KES" value="kes" />
+                    <Picker.Item label="KGS" value="kgs" />
+                    <Picker.Item label="KHR" value="khr" />
+                    <Picker.Item label="KMF" value="kmf" />
+                    <Picker.Item label="KPW" value="kpw" />
+                    <Picker.Item label="KRW" value="krw" />
+                    <Picker.Item label="KWD" value="kwd" />
+                    <Picker.Item label="KYD" value="kyd" />
+                    <Picker.Item label="KZT" value="kzt" />
+                    <Picker.Item label="LAK" value="lak" />
+                    <Picker.Item label="LBP" value="lbp" />
+                    <Picker.Item label="LKR" value="lkr" />
+                    <Picker.Item label="LRD" value="lrd" />
+                    <Picker.Item label="LSL" value="lsl" />
+                    <Picker.Item label="LVL" value="lvl" />
+                    <Picker.Item label="LYD" value="lyd" />
+                    <Picker.Item label="MAD" value="mad" />
+                    <Picker.Item label="MDL" value="mdl" />
+                    <Picker.Item label="MGA" value="mga" />
+                    <Picker.Item label="MKD" value="mkd" />
+                    <Picker.Item label="MMK" value="mmk" />
+                    <Picker.Item label="MNT" value="mnt" />
+                    <Picker.Item label="MOP" value="mop" />
+                    <Picker.Item label="MRO" value="mro" />
+                    <Picker.Item label="MUR" value="mur" />
+                    <Picker.Item label="MVR" value="mvr" />
+                    <Picker.Item label="MWK" value="mwk" />
+                    <Picker.Item label="MXN" value="mxn" />
+                    <Picker.Item label="MYR" value="myr" />
+                    <Picker.Item label="MZN" value="mzn" />
+                    <Picker.Item label="NAD" value="nad" />
+                    <Picker.Item label="NGN" value="ngn" />
+                    <Picker.Item label="NIO" value="nio" />
+                    <Picker.Item label="NOK" value="nok" />
+                    <Picker.Item label="NPR" value="npr" />
+                    <Picker.Item label="NZD" value="nzd" />
+                    <Picker.Item label="OMR" value="omr" />
+                    <Picker.Item label="PAB" value="pab" />
+                    <Picker.Item label="PEN" value="pen" />
+                    <Picker.Item label="PGK" value="pgk" />
+                    <Picker.Item label="PHP" value="php" />
+                    <Picker.Item label="PKR" value="pkr" />
+                    <Picker.Item label="PLN" value="pln" />
+                    <Picker.Item label="PYG" value="pyg" />
+                    <Picker.Item label="QAR" value="qar" />
+                    <Picker.Item label="RON" value="ron" />
+                    <Picker.Item label="RSD" value="rsd" />
+                    <Picker.Item label="RUB" value="rub" />
+                    <Picker.Item label="RWF" value="rwf" />
+                    <Picker.Item label="SAR" value="sar" />
+                    <Picker.Item label="SBD" value="sbd" />
+                    <Picker.Item label="SCR" value="scr" />
+                    <Picker.Item label="SDG" value="sdg" />
+                    <Picker.Item label="SEK" value="sek" />
+                    <Picker.Item label="SGD" value="sgd" />
+                    <Picker.Item label="SHP" value="shp" />
+                    <Picker.Item label="SLL" value="sll" />
+                    <Picker.Item label="SOS" value="sos" />
+                    <Picker.Item label="SRD" value="srd" />
+                    <Picker.Item label="STD" value="std" />
+                    <Picker.Item label="SYP" value="syp" />
+                    <Picker.Item label="SZL" value="szl" />
+                    <Picker.Item label="THB" value="thb" />
+                    <Picker.Item label="TJS" value="tjs" />
+                    <Picker.Item label="TMT" value="tmt" />
+                    <Picker.Item label="TND" value="tnd" />
+                    <Picker.Item label="TOP" value="top" />
+                    <Picker.Item label="TRY" value="try" />
+                    <Picker.Item label="TTD" value="ttd" />
+                    <Picker.Item label="TWD" value="twd" />
+                    <Picker.Item label="TZS" value="tzs" />
+                    <Picker.Item label="UAH" value="uah" />
+                    <Picker.Item label="UGX" value="ugx" />
+                    <Picker.Item label="USD" value="usd" />
+                    <Picker.Item label="UYU" value="uyu" />
+                    <Picker.Item label="UZS" value="uzs" />
+                    <Picker.Item label="VEF" value="vef" />
+                    <Picker.Item label="VND" value="vnd" />
+                    <Picker.Item label="VUV" value="vuv" />
+                    <Picker.Item label="WST" value="wst" />
+                    <Picker.Item label="XAF" value="xaf" />
+                    <Picker.Item label="XCD" value="xcd" />
+                    <Picker.Item label="XDR" value="xdr" />
+                    <Picker.Item label="XOF" value="xof" />
+                    <Picker.Item label="XPF" value="xpf" />
+                    <Picker.Item label="YER" value="yer" />
+                    <Picker.Item label="ZAR" value="zar" />
+                    <Picker.Item label="ZMW" value="zmw" />  
+                  </Picker>
+                  <Text stype={styles.currencyValue}>{(this.state.currencyToValue !== 0) ? this.state.currencyToValue : ''}</Text>
+                  <View stype={styles.buttonConvert}>
+                  <TouchableOpacity onPress={this.convertCurrency.bind(this)}>
+                    <Text>Convert</Text>
+                  </TouchableOpacity>
+                  </View>
+                </View>
+              </View>
+            )
+          }
         }}
         configureScene={(route, routeStack) =>
           Navigator.SceneConfigs.FadeAndroid}
